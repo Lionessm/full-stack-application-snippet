@@ -1,6 +1,5 @@
 'use strict';
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 
 module.exports = (sequelize) => {
 
@@ -38,25 +37,7 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
         },
 
-        userId: {
-            type: DataTypes.INTEGER,
-            foreignKey: {
-                fieldName: 'id',
-                allowNull: false,
-            },
-        },
-
     }, { sequelize });
-
-    Course.associate = (models) => {
-        // TODO Add associations.
-        Course.belongsTo(models.User, {
-            foreignKey: {
-                fieldName: 'id',
-                allowNull: false,
-            },
-        });
-    };
-
+    
     return Course;
-    };
+};
