@@ -38,6 +38,6 @@ module.exports = (sequelize) => {
         },
 
     }, { sequelize });
-    
+
     return Course;
 };

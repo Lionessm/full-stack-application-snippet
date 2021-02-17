@@ -1,11 +1,6 @@
 'use strict';
 
-const { errorHandler } = require("./middleware/error-handler");
-
 const express = require('express');
-const { asyncHandler } = require('./middleware/async-handler');
-const { User } = require('./models');
-const { authenticateUser } = require('./middleware/auth-user');
 const { Course } = require('./models');
 
 // Construct a router instance.
